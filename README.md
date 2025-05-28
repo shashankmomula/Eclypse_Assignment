@@ -1,11 +1,15 @@
 # Eclypse - Modern Fashion E-commerce Platform
 
+<<<<<<< HEAD
 ![Eclypse Logo](client/src/assets/images/figma_logo.png)
+=======
+>>>>>>> ae34760f5b130ffb548436eac4837a2f52533f68
 
 A modern, responsive e-commerce platform built with React, TypeScript, and Node.js, featuring a sleek design and seamless shopping experience.
 
 ## 🌟 Features
 
+<<<<<<< HEAD
 - **Modern UI/UX Design**
   - Responsive layout that works on all devices
   - Dark theme with elegant aesthetics
@@ -32,6 +36,31 @@ A modern, responsive e-commerce platform built with React, TypeScript, and Node.
 
 ## 🛠️ Tech Stack
 
+=======
+- **AI-Powered Features**
+  - Outfit generation using OpenAI
+  - Smart product recommendations
+  - Accessory suggestions
+
+- **Modern UI/UX Design**
+  - Responsive layout that works on all devices
+  - Dark theme with elegant aesthetics
+  - Interactive product cards with hover effects
+
+- **Product Management**
+  - Featured products showcase
+  - Category-based browsing
+  - Detailed product views
+
+- **Shopping Experience**
+  - Shopping cart functionality
+  - Local storage for cart persistence
+  - Checkout process
+
+
+## 🛠️ Tech Stack
+
+>>>>>>> ae34760f5b130ffb548436eac4837a2f52533f68
 ### Frontend
 - React 18
 - TypeScript
@@ -95,9 +124,13 @@ cd client
 npm run dev
 ```
 
+<<<<<<< HEAD
 The application will be available at:
 - Frontend: http://localhost:5173
 - Backend: http://localhost:3000
+=======
+The application will be available at: https://eclypse-assignment.netlify.app/
+>>>>>>> ae34760f5b130ffb548436eac4837a2f52533f68
 
 ## 📱 Responsive Design
 
@@ -107,6 +140,7 @@ The application is fully responsive and optimized for:
 - Laptops
 - Desktop screens
 
+<<<<<<< HEAD
 Key responsive features:
 - Mobile-first approach
 - Flexible grid layouts
@@ -134,6 +168,9 @@ Key responsive features:
 - Featured products grid
 - Category showcase
 - Newsletter subscription
+=======
+
+>>>>>>> ae34760f5b130ffb548436eac4837a2f52533f68
 
 ## 🔒 Environment Variables
 
@@ -172,9 +209,13 @@ eclypse/
 
 The application can be deployed to platforms like:
 - Render
+<<<<<<< HEAD
 - Vercel
 - Netlify
 - Heroku
+=======
+- Netlify
+>>>>>>> ae34760f5b130ffb548436eac4837a2f52533f68
 
 ### Render Deployment
 1. Create a new Web Service
@@ -191,6 +232,7 @@ The application can be deployed to platforms like:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+<<<<<<< HEAD
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -198,10 +240,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Authors
 
 - Your Name - Initial work
+=======
+
+## 👥 Authors
+
+M. Shashank
+>>>>>>> ae34760f5b130ffb548436eac4837a2f52533f68
 
 ## 🙏 Acknowledgments
 
 - OpenAI for AI integration
 - Pexels for stock images
 - Heroicons for icons
+<<<<<<< HEAD
 - Tailwind CSS for styling 
+=======
+- Tailwind CSS for styling
+>>>>>>> ae34760f5b130ffb548436eac4837a2f52533f68
