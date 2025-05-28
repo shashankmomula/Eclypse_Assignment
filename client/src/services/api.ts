@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api';
+
+const API_URL = 'https://function-bun-production-14c7.up.railway.app/';
+// http://localhost:3000/api
 
 export interface Product {
   id: string;
