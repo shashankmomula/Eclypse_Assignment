@@ -12,5 +12,6 @@
     "build:all": "cd client && npm run build && cd ../server && npm run build",
     "start:server": "cd server && npm start",
     "start:client": "cd client && npm run dev"
+    
   }
 } 

@@ -4,12 +4,10 @@
   "description": "Backend server for Eclypse e-commerce website",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "nodemon --watch src/**/*.ts --exec ts-node src/index.ts",
-    "build": "tsc",
-    "postinstall": "npm run build",
-    "test": "jest"
-  },
+  "build": "tsc",
+  "start": "node dist/index.js",
+  "dev": "nodemon --watch src/**/*.ts --exec ts-node src/index.ts"
+},
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
