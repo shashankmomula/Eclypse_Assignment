@@ -1,34 +1,30 @@
 # Eclypse - Modern Fashion E-commerce Platform
 
-![Eclypse Logo](client/src/assets/images/figma_logo.png)
 
 A modern, responsive e-commerce platform built with React, TypeScript, and Node.js, featuring a sleek design and seamless shopping experience.
 
 ## 🌟 Features
 
+- **AI-Powered Features**
+  - Outfit generation using OpenAI
+  - Smart product recommendations
+  - Accessory suggestions
+
 - **Modern UI/UX Design**
   - Responsive layout that works on all devices
   - Dark theme with elegant aesthetics
-  - Smooth animations and transitions
   - Interactive product cards with hover effects
 
 - **Product Management**
   - Featured products showcase
   - Category-based browsing
   - Detailed product views
-  - Product ratings and reviews
-  - Size and color variants
 
 - **Shopping Experience**
   - Shopping cart functionality
   - Local storage for cart persistence
   - Checkout process
-  - Order summary
 
-- **AI-Powered Features**
-  - Outfit generation using OpenAI
-  - Smart product recommendations
-  - Accessory suggestions
 
 ## 🛠️ Tech Stack
 
@@ -95,9 +91,7 @@ cd client
 npm run dev
 ```
 
-The application will be available at:
-- Frontend: http://localhost:5173
-- Backend: http://localhost:3000
+The application will be available at: https://eclypse-assignment.netlify.app/
 
 ## 📱 Responsive Design
 
@@ -107,33 +101,7 @@ The application is fully responsive and optimized for:
 - Laptops
 - Desktop screens
 
-Key responsive features:
-- Mobile-first approach
-- Flexible grid layouts
-- Responsive typography
-- Adaptive spacing
-- Touch-friendly interactions
 
-## 🎨 UI Components
-
-### Layout
-- Responsive navigation with mobile menu
-- Sticky header
-- Footer with grid layout
-- Container-based content structure
-
-### Product Cards
-- Image hover effects
-- Quick add to cart
-- Rating display
-- Price and details
-- Responsive sizing
-
-### Home Page
-- Hero section with video background
-- Featured products grid
-- Category showcase
-- Newsletter subscription
 
 ## 🔒 Environment Variables
 
@@ -172,9 +140,7 @@ eclypse/
 
 The application can be deployed to platforms like:
 - Render
-- Vercel
 - Netlify
-- Heroku
 
 ### Render Deployment
 1. Create a new Web Service
@@ -191,13 +157,10 @@ The application can be deployed to platforms like:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors
 
-- Your Name - Initial work
+M. Shashank
 
 ## 🙏 Acknowledgments
 
