@@ -19,4 +19,4 @@ root.render(
   </React.StrictMode>
 )
 
-console.log('Application rendered')
+

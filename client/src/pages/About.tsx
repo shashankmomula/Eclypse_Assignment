@@ -2,9 +2,11 @@ import { Link } from 'react-router-dom';
 // import redDress from '../red_dress.png';
 import { aboutData } from '../data/about';
 
+// divide to 6-7 sections 
 const About = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+    
       
       <section className="relative py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
@@ -60,6 +62,8 @@ const About = () => {
         </div>
       </section>
 
+      {/* members */}
+
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
@@ -82,7 +86,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Vision Section */}
+   
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -92,7 +96,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-black border-t border-gray-800/50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Join Our Fashion Journey</h2>

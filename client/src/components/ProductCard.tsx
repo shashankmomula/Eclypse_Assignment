@@ -8,15 +8,15 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const addToCart = () => {
-    // Get existing cart items
+    // Get existing cart items here
     const savedCart = localStorage.getItem('cart');
     const cartItems = savedCart ? JSON.parse(savedCart) : [];
 
-    // Check if item already exists in cart
+    // Check if item already exists in cart and update quantity
     const existingItem = cartItems.find((item: Product) => item.id === product.id);
 
     if (existingItem) {
-      // Update quantity if item exists
+      // Update quantity if item exists 
       const updatedItems = cartItems.map((item: Product) =>
         item.id === product.id
           ? { ...item, quantity: (item.quantity || 1) + 1 }
@@ -29,7 +29,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       localStorage.setItem('cart', JSON.stringify([...cartItems, newItem]));
     }
 
-    // Show success message (you can implement a toast notification here)
+    // Show success message 
     alert('Item added to cart!');
   };
 
@@ -41,7 +41,8 @@ export default function ProductCard({ product }: ProductCardProps) {
           alt={product.name}
           className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-120"
         />
-        {/* Hover Overlay with Description */}
+      
+      
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
           <div className="text-center">
             <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>

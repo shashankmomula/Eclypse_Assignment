@@ -1,7 +1,4 @@
-
-
-
-const API_URL = 'https://function-bun-production-14c7.up.railway.app/';
+const API_URL = 'https://eclypse-assignment-4mze.onrender.com/api';
 // http://localhost:3000/api
 
 export interface Product {

@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import OpenAI from 'openai';
 import productRoutes from './routes/productRoutes';
 import categoryRoutes from './routes/categoryRoutes';
+import path from 'path';
 
 dotenv.config();
 
@@ -16,14 +17,17 @@ const openai = new OpenAI({
 app.use(cors());
 app.use(express.json());
 
-// Routes
+// API Routes
 app.use('/api/products', productRoutes);
 app.use('/api/categories', categoryRoutes);
 
-app.get('/', (req, res) => {
+// Serve static files from the client/dist directory
+app.use(express.static(path.join(__dirname, '../../client/dist')));
+
+// API health check
+app.get('/api/health', (req, res) => {
   res.send('API is running');
 });
-
 
 // Outfit Generation Endpoint
 app.post('/api/generate-outfit', async (req: Request, res: Response) => {
@@ -59,7 +63,7 @@ app.post('/api/generate-outfit', async (req: Request, res: Response) => {
       ]
     }`;
 
-    console.log('Sending prompt to OpenAI:', prompt);
+    
 
     const completion = await openai.chat.completions.create({
       messages: [{ role: "user", content: prompt }],
@@ -69,7 +73,7 @@ app.post('/api/generate-outfit', async (req: Request, res: Response) => {
     });
 
     const response = completion.choices[0].message.content;
-    console.log('Raw AI Response:', response);
+    
 
     let accessories = [];
     
@@ -77,14 +81,14 @@ app.post('/api/generate-outfit', async (req: Request, res: Response) => {
       const cleanedResponse = response?.replace(/```json|```/g, '').trim();
       accessories = JSON.parse(cleanedResponse || '{"accessories":[]}').accessories;
 
-      console.log('Parsed Accessories:', accessories);
+      
       
       // Validate and clean up image URLs
       accessories = accessories.map((accessory: any) => ({
         ...accessory,
         image: accessory.image || 'https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg'
       }));
-      console.log('Final Accessories with Images:', accessories);
+     
     } catch (parseError) {
       console.error('Error parsing OpenAI response:', parseError);
       accessories = [];
@@ -95,6 +99,11 @@ app.post('/api/generate-outfit', async (req: Request, res: Response) => {
     console.error('Error generating outfit:', error);
     res.status(500).json({ error: 'Failed to generate outfit suggestions' });
   }
+});
+
+// Catch-all route to handle client-side routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
 });
 
 // Start server

@@ -27,6 +27,8 @@ export interface AboutData {
   };
 }
 
+// About section data as its is not dynamic
+
 export const aboutData: AboutData = {
   company: {
     name: "Eclypse",

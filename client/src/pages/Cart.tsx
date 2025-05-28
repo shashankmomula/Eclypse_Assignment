@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import type { CartItem } from '../types';
 import { TrashIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Get cart items from localStorage
@@ -45,12 +46,12 @@ export default function Cart() {
           <div className="text-center py-16 bg-gray-900/50 rounded-lg border border-gray-800">
             <ShoppingBagIcon className="h-16 w-16 text-gray-600 mx-auto mb-4" />
             <p className="text-gray-400 text-xl mb-6">Your cart is empty</p>
-            <Link 
-              to="/products" 
+            <button
+              onClick={() => navigate('/products')}
               className="inline-block bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
             >
               Continue Shopping
-            </Link>
+            </button>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -121,17 +122,11 @@ export default function Cart() {
                   </div>
                 </div>
                 <button 
-                  onClick={() => window.location.href = '/checkout'}
+                  onClick={() => navigate('/checkout')}
                   className="w-full bg-white text-black px-6 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg"
                 >
                   Proceed to Checkout
                 </button>
-                <Link 
-                  to="/products"
-                  className="block text-center text-gray-400 hover:text-white mt-4 transition-colors duration-200"
-                >
-                  Continue Shopping
-                </Link>
               </div>
             </div>
           </div>

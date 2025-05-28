@@ -2,7 +2,7 @@ services:
   - type: web
     name: eclypse-server
     env: node
-    buildCommand: npm install && npm run build
+    buildCommand: cd .. && npm install && cd server && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV

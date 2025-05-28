@@ -30,6 +30,6 @@ function App() {
   );
 }
 
-console.log('App component defined');
+
 
 export default App;

@@ -5,6 +5,7 @@ import { CreditCardIcon, LockClosedIcon } from '@heroicons/react/24/outline';
 
 export default function Checkout() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  //default data using useState
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

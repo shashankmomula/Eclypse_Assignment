@@ -24,7 +24,7 @@ export default function OutfitGenerator({ productName, productDescription, produ
     setError(null);
 
     try {
-      console.log('Sending request with product:', { productName, productDescription, productCategory });
+     
       
       const response = await fetch('http://localhost:3000/api/generate-outfit', {
         method: 'POST',
@@ -43,7 +43,7 @@ export default function OutfitGenerator({ productName, productDescription, produ
       }
 
       const data = await response.json();
-      console.log('Received accessories from API:', data.accessories);
+     
       setAccessories(data.accessories);
     } catch (err) {
       console.error('Error in generateOutfit:', err);
@@ -59,7 +59,7 @@ export default function OutfitGenerator({ productName, productDescription, produ
         key={index}
         className="flex gap-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700"
       >
-        {accessory.image ? (
+        {/* {accessory.image ? (
           <img
             src={accessory.image}
             alt={accessory.name}
@@ -69,7 +69,7 @@ export default function OutfitGenerator({ productName, productDescription, produ
           <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
             <SparklesIcon className="h-8 w-8 text-gray-500" />
           </div>
-        )}
+        )} */}
         <div>
           <h4 className="text-white font-medium mb-1">{accessory.name}</h4>
           <p className="text-gray-400 text-sm mb-2">{accessory.description}</p>
@@ -97,7 +97,7 @@ export default function OutfitGenerator({ productName, productDescription, produ
         <p className="text-red-500 mb-4">{error}</p>
       )}
 
-      {/* console.log(accessories); */}
+     
       {accessories.length > 0 && (
         <div className="space-y-4">
           <p className="text-gray-400">Suggested accessories to complete your look:</p>
