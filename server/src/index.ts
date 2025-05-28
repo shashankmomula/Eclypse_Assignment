@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import OpenAI from 'openai';
@@ -21,7 +21,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/categories', categoryRoutes);
 
 // Outfit Generation Endpoint
-app.post('/api/generate-outfit', async (req, res) => {
+app.post('/api/generate-outfit', async (req: Request, res: Response) => {
   try {
     const { productName, productDescription, productCategory } = req.body;
 
@@ -70,7 +70,7 @@ app.post('/api/generate-outfit', async (req, res) => {
     
     try {
       const cleanedResponse = response?.replace(/```json|```/g, '').trim();
-accessories = JSON.parse(cleanedResponse || '{"accessories":[]}').accessories;
+      accessories = JSON.parse(cleanedResponse || '{"accessories":[]}').accessories;
 
       console.log('Parsed Accessories:', accessories);
       

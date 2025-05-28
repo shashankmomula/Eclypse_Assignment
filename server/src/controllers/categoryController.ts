@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { categories, Category } from '../data/categories';
 
-export const getCategories = (req: Request, res: Response) => {
+export const getCategories = (req: Request, res: Response): void => {
   const { featured } = req.query;
 
   if (featured === 'true') {
@@ -12,7 +12,7 @@ export const getCategories = (req: Request, res: Response) => {
   }
 };
 
-export const getCategoryById = (req: Request, res: Response) => {
+export const getCategoryById = (req: Request, res: Response): void => {
   const category = categories.find((c: Category) => c.id === req.params.id);
   if (category) {
     res.json(category);

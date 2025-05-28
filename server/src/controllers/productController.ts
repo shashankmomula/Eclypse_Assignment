@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { products } from '../data/products';
+import { products, Product } from '../data/products';
 
-export const getProducts = (req: Request, res: Response) => {
+export const getProducts = (req: Request, res: Response): void => {
   const { category, search, sort, featured, newArrival } = req.query;
 
   let filteredProducts = [...products];
