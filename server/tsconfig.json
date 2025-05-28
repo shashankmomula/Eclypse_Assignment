@@ -15,7 +15,6 @@
       "*": ["node_modules/*"]
     },
     "typeRoots": ["./node_modules/@types"],
-    "types": ["node", "express", "cors"],
     "lib": ["es2018", "dom"],
     "declaration": true
   },
