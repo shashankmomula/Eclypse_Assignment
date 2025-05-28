@@ -111,8 +111,8 @@ export default function Home() {
             {categories.map((category) => (
               <Link
                 key={category.id}
-                
-                className="group relative h-80 rounded-lg overflow-hidden"
+                to={`/categories/${category.id}`}
+                className="group relative h-[500px] rounded-lg overflow-hidden bg-black border border-gray-800"
               >
                 <img
                   src={category.imageUrl}

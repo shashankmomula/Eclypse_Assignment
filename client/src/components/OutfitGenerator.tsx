@@ -15,12 +15,12 @@ interface Accessory {
 }
 
 export default function OutfitGenerator({ productName, productDescription, productCategory }: OutfitGeneratorProps) {
-  const [accessories, setAccessories] = useState<Accessory[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [accessories, setAccessories] = useState<Accessory[]>([]);
 
   const generateOutfit = async () => {
-    setLoading(true);
+    setIsLoading(true);
     setError(null);
 
     try {
@@ -49,30 +49,27 @@ export default function OutfitGenerator({ productName, productDescription, produ
       console.error('Error in generateOutfit:', err);
       setError('Failed to generate outfit suggestions. Please try again.');
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   };
 
   const AccessoryCard = ({ accessory, index }: { accessory: Accessory; index: number }) => {
-    const [imageError, setImageError] = useState(false);
-
     return (
       <div
         key={index}
         className="flex gap-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700"
       >
-        {/* {!imageError && accessory.image ? (
+        {accessory.image ? (
           <img
             src={accessory.image}
             alt={accessory.name}
             className="w-24 h-24 object-cover rounded-lg"
-            onError={() => setImageError(true)}
           />
         ) : (
           <div className="w-24 h-24 bg-gray-700 rounded-lg flex items-center justify-center">
             <SparklesIcon className="h-8 w-8 text-gray-500" />
           </div>
-        )} */}
+        )}
         <div>
           <h4 className="text-white font-medium mb-1">{accessory.name}</h4>
           <p className="text-gray-400 text-sm mb-2">{accessory.description}</p>
@@ -88,11 +85,11 @@ export default function OutfitGenerator({ productName, productDescription, produ
         <h3 className="text-xl font-semibold text-white">Complete Your Look</h3>
         <button
           onClick={generateOutfit}
-          disabled={loading}
+          disabled={isLoading}
           className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-black hover:bg-gray-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <SparklesIcon className="h-5 w-5" />
-          {loading ? 'Generating...' : 'Generate Outfit'}
+          {isLoading ? 'Generating...' : 'Generate Outfit'}
         </button>
       </div>
 

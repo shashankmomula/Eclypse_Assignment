@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+
 import type { CartItem } from '../types';
 import { CreditCardIcon, LockClosedIcon } from '@heroicons/react/24/outline';
 

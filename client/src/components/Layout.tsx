@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCartIcon, UserIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { redDress, heroVideo, figmaLogo, figmaHome } from '../assets';
+import { ShoppingCartIcon, UserIcon } from '@heroicons/react/24/outline';
+import { figmaLogo } from '../assets';
 
 interface LayoutProps {
   children: ReactNode;
