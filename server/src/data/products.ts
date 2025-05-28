@@ -124,7 +124,7 @@ export const products: Product[] = [
   },
   {
     id: '8',
-    name: 'Navy Blue Blazer',
+    name: 'Navy Blue Blazer for men',
     description: ' A sharp semi-formal look perfect for meetings or dinner dates.',
     price: 699.99,
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop',
