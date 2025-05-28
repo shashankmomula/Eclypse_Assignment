@@ -4,7 +4,8 @@
   "description": "Backend server for Eclypse e-commerce website",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm install && tsc",
+    "prebuild": "npm install @types/node @types/express @types/cors --save-dev",
+    "build": "tsc",
     "start": "node dist/index.js",
     "dev": "nodemon --watch src/**/*.ts --exec ts-node src/index.ts"
   },
