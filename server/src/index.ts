@@ -20,6 +20,11 @@ app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/categories', categoryRoutes);
 
+app.get('/', (req, res) => {
+  res.send('API is running');
+});
+
+
 // Outfit Generation Endpoint
 app.post('/api/generate-outfit', async (req: Request, res: Response) => {
   try {
