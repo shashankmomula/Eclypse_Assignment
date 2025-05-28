@@ -11,6 +11,7 @@ services:
         value: 3000
       - key: OPENAI_API_KEY
         sync: false
+    rootDir: server
 
   - type: web
     name: eclypse-client
@@ -19,4 +20,5 @@ services:
     startCommand: cd client && npm run preview
     envVars:
       - key: VITE_API_URL
-        value: https://eclypse-server.onrender.com 
+        value: https://eclypse-server.onrender.com
+    rootDir: client 
